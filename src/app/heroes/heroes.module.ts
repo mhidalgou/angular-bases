@@ -16,8 +16,8 @@ import { ListComponent } from './list/list.component';
   declarations: [
     HeroComponent,
     ListComponent,
-
-    //se importan los componentes
+    //se importan los componentes del heroe
+    //el nombre se encuentra en el export class component del modulo ts de cada componente del heroe
   ],
   imports:[
     CommonModule
