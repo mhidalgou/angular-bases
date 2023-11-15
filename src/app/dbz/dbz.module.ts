@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainPageCommponent } from './pages/main-page.component';
 import { ListComponent } from './components/list/list.component';
 import { AddCharacterComponent } from './components/add-character/add-character.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,6 +15,7 @@ import { AddCharacterComponent } from './components/add-character/add-character.
   exports:[MainPageCommponent],
   //se debe exportar para se que sea visible a los demás modulos
   //el único componemte que se exporta es el maiPage que contiene el ListComponent
-  imports: [CommonModule]
+  imports: [CommonModule,
+    FormsModule]
 })
 export class DbzModule { }
