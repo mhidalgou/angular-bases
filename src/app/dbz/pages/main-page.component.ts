@@ -8,7 +8,6 @@ import { Character } from '../interfaces/characters.interface';
 })
 // se usa el backstick = alt + 96
 
-
 export class MainPageCommponent  {
 
   public characters: Character[]=[
@@ -27,10 +26,9 @@ export class MainPageCommponent  {
   ];
 
   onNewCharacter(character: Character): void {
-    console.log('Main Page');
-    console.log(character);
+    // console.log('Main Page');
+    // console.log(character);
 
+    this.characters.push(character);
   }
-
-
 }
