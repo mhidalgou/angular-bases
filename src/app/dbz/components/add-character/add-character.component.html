@@ -1,5 +1,5 @@
 <h4>Agregar Personaje</h4>
-<form class="row" (ngSubmit)="emitCharacter">
+<form class="row" (ngSubmit)="emitCharacter()">
 
   <input
     type="text"
@@ -19,6 +19,6 @@
     Agregar
   </button>
 
-<pre>{{ character | json }}</pre>
+<!-- <pre>{{ character | json }}</pre> para que aparezca el objeto en la pagina -->
 </form>
 <!-- [(ngMOdel)] se debe importar el módulo de FormsModule en el módulo del componente -->

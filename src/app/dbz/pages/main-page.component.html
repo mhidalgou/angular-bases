@@ -4,7 +4,10 @@
 <!-- .row   // crea un div con la clase row-->
 <div class="row">
   <div class="col">
-    <dbz-list [characterList]="characters"></dbz-list>
+    <dbz-list [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"
+
+    ></dbz-list>
     <!-- cuando se quiere enviar de padre a hijo se usan las llaves cuadradas -->
 
     <!--<h4>Listado</h4>

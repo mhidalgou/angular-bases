@@ -1,6 +1,8 @@
 //a-compon + tab
 import { Component } from '@angular/core';
 import { Character } from '../interfaces/characters.interface';
+import { TitleStrategy } from '@angular/router';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-dbz-main-page',
@@ -10,25 +12,20 @@ import { Character } from '../interfaces/characters.interface';
 
 export class MainPageCommponent  {
 
-  public characters: Character[]=[
-    {
-    name:'Krillin',
-    power: 1000
-    },
-    {
-    name:'Goku',
-    power: 9500
-    },
-    {
-      name: 'Vegeta',
-      power:7500
+  constructor(private dbzService: DbzService){}
+    //para inyectar el servicio
+    get characters(): Character[]{
+      return this.dbzService.characters;
     }
-  ];
 
-  onNewCharacter(character: Character): void {
-    // console.log('Main Page');
-    // console.log(character);
+    onDeleteCharacter (id: string): void {
+      this.dbzService.deleteCharacterById(id)
+    }
 
-    this.characters.push(character);
+    onNewCharacter( character:Character){
+      this.dbzService.addCharacter(character);
+    }
   }
-}
+
+
+

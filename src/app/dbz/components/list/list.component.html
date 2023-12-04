@@ -7,20 +7,21 @@
     let esPar= even;
     let esImpar=odd"
 
-    class="list-group-item" [ngClass]="{
+    class="list-group-item d-flex justify-content-between align-items-center" [ngClass]="{
       'list-group-item-success': isLast,
       'list-group-item-primary': esPar,
     }">
-
-    <span class="text-primary">{{i+1}}-</span>
-    <span>{{ character.name}} - </span>
-    <strong>Power:</strong>
-    <span> {{character.power}}</span>
-    <!-- <span> Es el primero:{{isFirt}}</span>
-    <span> Es el ultimo: {{isLast}}</span>
-    <span> Es par: {{esPar}}</span>
-    <span> Es impar: {{esImpar}}</span> -->
-
+    <div>
+      <span class="text-primary">{{i+1}}-</span>
+      <span>{{ character.name}} - </span>
+      <strong>Power:</strong>
+      <span> {{character.power}}</span>
+      <!-- <span> Es el primero:{{isFirt}}</span>
+      <span> Es el ultimo: {{isLast}}</span>
+      <span> Es par: {{esPar}}</span>
+      <span> Es impar: {{esImpar}}</span> -->
+      </div>
+    <button (click)="onDeleteCharacter(character.id)" class="btn btn-danger">X</button>
   </li>
 </ul>
 <!-- ver list.componets.ts ahi se definio el arreglo characterList -->
